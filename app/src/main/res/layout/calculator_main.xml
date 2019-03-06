@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="bottom"
+android:layout_width="match_parent" android:layout_height="match_parent" android:background="#eeeeee" android:orientation="vertical"
+xmlns:android="http://schemas.android.com/apk/res/android">Calculator
+
+<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
+        <TextView
+            android:text="Stardard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:gravity="left"
+            />
+        <Button
+            android:text="Reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:onClick="resetHistory"
+            />
+</RelativeLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <ListView
+        android:id="@+id/historyListView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:textAlignment="textEnd"
+
+
+        >
+    </ListView>
+
+</RelativeLayout>
+    <TextView
+        android:id="@+id/txt_current_session"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/edt_input"
+        android:hint=""
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:weightSum="4">
+
+        <Button
+            android:id="@+id/btn_percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="doOperation"
+            android:text="%"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btn_sqrt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="doOperation"
+            android:text="√"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btn_square"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="doOperation"
+            android:text="x²"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btn_invert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="doOperation"
+            android:text="1/x"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:weightSum="4">
+
+        <Button
+            android:id="@+id/btn_ce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="doOperation"
+            android:text="CE"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btn_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="doOperation"
+            android:text="C"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btn_backspace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="doBackspace"
+            android:text="BS"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btn_divide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="doOperation"
+            android:text="/"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:weightSum="4">
+
+        <Button
+            android:id="@+id/btn_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="inputNumber"
+            android:text="7"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btn_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="inputNumber"
+            android:text="8"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btn_9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="inputNumber"
+            android:text="9"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btn_multiply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="doOperation"
+            android:text="x"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:weightSum="4">
+
+        <Button
+            android:id="@+id/btn_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="inputNumber"
+            android:text="4"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btn_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="inputNumber"
+            android:text="5"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btn_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="inputNumber"
+            android:text="6"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btn_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="doOperation"
+            android:text="-"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:weightSum="4">
+
+        <Button
+            android:id="@+id/btn_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="inputNumber"
+            android:text="1"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btn_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="inputNumber"
+            android:text="2"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btn_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="inputNumber"
+            android:text="3"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="doOperation"
+            android:text="+"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:weightSum="4">
+
+        <Button
+            android:id="@+id/btn_togglesign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="doOperation"
+            android:text="+/-"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btn_0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="inputNumber"
+            android:text="0"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btn_dot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="doOperation"
+            android:text="."
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btn_equalSign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="doOperation"
+            android:text="="
+            android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>
+
+</LinearLayout>
+
